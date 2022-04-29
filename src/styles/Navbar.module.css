@@ -1,0 +1,166 @@
+/* responsive navbar */
+img {
+  font-size: 1.5rem;
+  width: 170px;
+  text-decoration: none;
+  font-weight: bold;
+
+  /* edit */
+  color: black;
+  font-family: sans-serif;
+  transition: all 0.6s ease;
+  /* background: rgba(0, 0, 0, 0.05); */
+}
+.logo:hover {
+  /* edit */
+  color: rgba(48, 48, 48, 0.481);
+  transition: all 0.6s ease;
+}
+.header {
+  /* width: 100%;
+    position: fixed; */
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+
+  /* edit */
+  height: 100px;
+  padding: 1.5rem;
+  color: white;
+  /* background: #b10070; */
+}
+.nav a,
+.car {
+  margin-right: 1em;
+  font-size: 20px;
+  text-decoration: none;
+  list-style: none;
+
+  /* edit */
+  color: rgb(31, 31, 31);
+  font-family: sans-serif;
+  font-weight: 700;
+  transition: all 0.6s ease;
+  /* background: rgba(0, 0, 0, 0.05); */
+}
+.nav a:hover,
+.car:hover {
+  /* edit */
+  color: #b10070;
+  transition: all 0.6s ease;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+
+  /* edit */
+  gap: 0.5rem;
+}
+.menu a {
+  display: block;
+
+  /* edit */
+  padding: 0.5rem;
+}
+.btn_mobile {
+  display: none;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    text-align: center;
+    height: 0px;
+    transition: 0.6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+
+    /* edit */
+    top: 95px;
+    background: #b10070;
+  }
+  .nav_active .menu {
+    height: calc(100vh + 140px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  .menu a {
+    list-style: none;
+    text-decoration: none;
+
+    /* edit */
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    color: white;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.212);
+  }
+  .car {
+    color: white;
+  }
+  .menu a:hover {
+    /* edit */
+    background: #ffc40033;
+  }
+  .btn_mobile {
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    cursor: pointer;
+
+    /* edit */
+    width: 40px;
+    height: 40px;
+    transition: all 0.5s ease-in-out;
+  }
+  .hamburguer {
+    display: block;
+    position: relative;
+    display: block;
+    width: 19px;
+    height: 3px;
+    color: rgb(31, 31, 31);
+    background: currentColor;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  .hamburguer::before,
+  .hamburguer::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 19px;
+    height: 3px;
+    background: currentColor;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  .hamburguer::before {
+    transform: translateY(-8px);
+  }
+  .hamburguer::after {
+    transform: translateY(8px);
+  }
+  .nav_active .hamburguer {
+    transform: translateX(-25px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .nav_active .hamburguer::before {
+    transform: rotate(45deg) translate(18px, -18px);
+  }
+  .nav_active .hamburguer::after {
+    transform: rotate(-45deg) translate(18px, 18px);
+  }
+}
