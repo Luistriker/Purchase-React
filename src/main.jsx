@@ -9,17 +9,16 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBuJv6CX8l-TrlB6I0f9iVezCk2laIP2pY",
-  authDomain: "store-31313.firebaseapp.com",
-  projectId: "store-31313",
-  storageBucket: "store-31313.appspot.com",
-  messagingSenderId: "454057716240",
-  appId: "1:454057716240:web:f0db1e2e81f825a5327895",
+  apiKey: "AIzaSyCHklAABWVQ9ALAe1As6hZSDn8j7zlRcus",
+  authDomain: "purchase-react.firebaseapp.com",
+  projectId: "purchase-react",
+  storageBucket: "purchase-react.appspot.com",
+  messagingSenderId: "622822337116",
+  appId: "1:622822337116:web:70c4dc66464645c1a55499",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
